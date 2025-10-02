@@ -6,15 +6,20 @@
         margin: 0;
         /* color: white; */
 	}
+
+
 }
 
 @theme {
     --color-*: initial;
     --color-Primary: #00092B;
     --color-Secondary: #151515;
+    --color-purple: #312B65;
+    --color-dark_blue: #132337;
+    --color-page_selector: #3C6AFF;
 
     --breakpoint-*: initial;
     --breakpoint-phone: 20rem;
     --breakpoint-laptop: 64rem;
-    --breakpoint-desktop: 80rem;
+    --breakpoint-desktop: 120rem;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
-import { pribadi } from '../utils/data'
-import Navbar from '../components/Navbar'
+import { pribadi } from '../utils/data';
+import Navbar from '../components/Navbar';
+import PageButton from '../components/PageButton';
 
 class LandingPage extends React.Component {
     constructor(props: any){
@@ -15,24 +16,26 @@ class LandingPage extends React.Component {
         return (
             <>
                 <header>
-                    <Navbar/>    
+                    {/* <Navbar/>     */}
                 </header>
 
                 <main>
-                    <div>
-                        {/* Isinya scroll wheel */}
-                    </div>
-                    <section id='description' className='bg-linear-to-b from-Primary to-Secondary color-[White]'>
-                        <div>
-                            <h1>My Name is</h1>
-                            <h1>{pribadi.name}</h1>
+                    <PageButton/>
+                    <section id='description'>
+                        <Navbar/>
+                        <div className='flex flex-row bg-linear-to-b from-Primary to-Secondary text-[White] items-center justify-center h-screen pl-[4rem]'>
                             <div>
-                                {pribadi.description}
+                                <h1 className='text-[48px]'>My Name is</h1>
+                                <h1 className='text-[48px]'>{pribadi.name}</h1>
+                                <div className='bg-linear-to-b from-purple to-dark_blue text-[24px] w-[750px] rounded-[8px] p-[32px] mt-[2rem]'>
+                                    {pribadi.description}
+                                </div>    
+                            </div>
+                            <div>
+                                <img src={pribadi.image_description} alt="" className='size-[750px] desktop:size-[1000px]'/>
                             </div>    
                         </div>
-                        <div>
-                            <img src={pribadi.image_description} alt="" />
-                        </div>
+                        
                     </section>
 
                     <section id='skills'>
