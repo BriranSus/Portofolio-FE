@@ -1,5 +1,6 @@
 import React from 'react';
 import { pribadi } from '../utils/data'
+import Navbar from '../components/Navbar'
 
 class LandingPage extends React.Component {
     constructor(props: any){
@@ -14,14 +15,14 @@ class LandingPage extends React.Component {
         return (
             <>
                 <header>
-                    {/* <Navbar></Navbar> */}    
+                    <Navbar/>    
                 </header>
 
                 <main>
                     <div>
                         {/* Isinya scroll wheel */}
                     </div>
-                    <section id='description'>
+                    <section id='description' className='bg-linear-to-b from-Primary to-Secondary color-[White]'>
                         <div>
                             <h1>My Name is</h1>
                             <h1>{pribadi.name}</h1>
